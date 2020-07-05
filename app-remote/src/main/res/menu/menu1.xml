@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/moreimg"
+        android:title="사진 모아보기" />
+    <item
+        android:id="@+id/later"
+        android:title="1년뒤 편지" />
+    <item
+        android:id="@+id/category"
+        android:title="카테고리 검색" />
+    <item
+        android:id="@+id/set"
+        android:title="설정" />
+</menu>

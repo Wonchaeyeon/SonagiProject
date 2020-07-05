@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".writeform">
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="416dp"
+        android:layout_height="53dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-4dp">
+
+
+        <ImageButton
+            android:id="@+id/backb"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:background="#00ffffff"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/backb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-40dp"
+            android:gravity="center"
+            android:text="일기 작성하기"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/tabbar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-40dp"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/tabbar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/middle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bott"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/feeling">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+
+
+                <ImageButton
+                    android:id="@+id/angry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="140dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/angry" />
+                <ImageButton
+                    android:id="@+id/happy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/happy" />
+                <ImageButton
+                    android:id="@+id/hurt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/hurt" />
+
+                <ImageButton
+                    android:id="@+id/crying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/crying" />
+
+                <ImageButton
+                    android:id="@+id/sleeping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/sleeping" />
+
+                <ImageButton
+                    android:id="@+id/heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/heart" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wether">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/sunshine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="140dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/sunshine" />
+
+                <ImageButton
+                    android:id="@+id/cloud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/cloud" />
+
+                <ImageButton
+                    android:id="@+id/snow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/snow" />
+
+                <ImageButton
+                    android:id="@+id/lightning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/lightning" />
+                <ImageButton
+                    android:id="@+id/light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/light" />
+
+                <ImageButton
+                    android:id="@+id/wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="15dp"
+                    app:srcCompat="@drawable/wind" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="saveData"
+                android:text="@string/saveStr"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+            <Button
+                android:id="@+id/upBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/updStr"
+                app:layout_constraintBaseline_toBaselineOf="@+id/saveBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/delBtn"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/save_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="저장후 결과 출력" />
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="+ 오늘 하루를 기록해보세요."
+            android:inputType="textMultiLine"
+            android:privateImeOptions="defaultInputmode=korean"
+            android:textColorLink="#DF8585"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bott"
+        android:layout_width="415dp"
+        android:layout_height="132dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middle">
+
+        <ImageButton
+            android:id="@+id/addimg"
+            android:layout_width="99dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="#00ffffff"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/addimg" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
