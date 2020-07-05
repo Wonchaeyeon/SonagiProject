@@ -90,6 +90,7 @@ public class CreateEventActivity extends AppCompatActivity {
         extractDataFromIntentAndInitialize();
 
         initializeUI();
+
     }
 
     @Override
@@ -323,9 +324,13 @@ public class CreateEventActivity extends AppCompatActivity {
     public void loadData(View view)
     {
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        String strLoadData = sharedPref.getString(getString(R.string.savedata_private_key), "Default Value");
+        String strLoadData = sharedPref.getString(getString(R.string.loaddata_private_key), "Default Value");
 
         TextView textView = (TextView) findViewById(R.id.load_text_view);
         textView.setText(strLoadData);
     }
-}
+
+
+    }
+
+

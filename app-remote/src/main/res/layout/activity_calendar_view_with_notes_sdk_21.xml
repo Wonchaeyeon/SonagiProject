@@ -46,7 +46,7 @@
         android:tint="#fff"
         app:elevation="0dp"
         app:srcCompat="@android:drawable/ic_input_add"
-
+    android:backgroundTint="#aa5f5e"
         />
 
 </android.support.design.widget.CoordinatorLayout>

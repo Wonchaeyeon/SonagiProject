@@ -11,7 +11,8 @@
         android:layout_height="53dp"
         android:layout_weight="1"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-4dp">
+        tools:layout_editor_absoluteX="-4dp"
+        >
 
 
         <ImageButton
@@ -206,8 +207,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#30294d"
                 android:onClick="saveData"
                 android:text="@string/saveStr"
+                android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edit" />
@@ -217,19 +220,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#30294d"
                 android:text="@string/updStr"
+                android:textColor="#FFFFFF"
                 app:layout_constraintBaseline_toBaselineOf="@+id/saveBtn"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/delBtn"
-                />
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
+
 
         <TextView
             android:id="@+id/save_text_view"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:hint="저장후 결과 출력" />
-
         <EditText
             android:id="@+id/edit"
             android:layout_width="match_parent"
@@ -256,14 +260,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/middle">
 
-        <ImageButton
-            android:id="@+id/addimg"
-            android:layout_width="99dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:background="#00ffffff"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/addimg" />
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/addimg"
+                android:layout_width="99dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/addimg" />
+
+            <ImageButton
+                android:id="@+id/addimg2"
+                android:layout_width="99dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/addimg" />
+
+            <ImageButton
+                android:id="@+id/addimg3"
+                android:layout_width="99dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/addimg" />
+            <ImageButton
+                android:id="@+id/addimg4"
+                android:layout_width="99dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/addimg" />
+        </LinearLayout>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

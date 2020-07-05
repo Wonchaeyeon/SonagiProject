@@ -193,21 +193,30 @@
                     android:id="@+id/go"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#30294d"
                     android:onClick="writeOnclick"
-                    android:text="일기 작성하기" />
+                    android:text="일기 작성하기"
+                    android:textColor="#FFFFFF" />
 
                 <Button
                     android:id="@+id/load"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#30294d"
                     android:onClick="loadData"
-                    android:text="일기 확인하기" />
+                    android:text="일기 확인하기"
+                    android:textColor="#FFFFFF" />
 
                 <TextView
                     android:id="@+id/load_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="작성된 내용이 없습니다." />
+                <TextView
+                    android:id="@+id/save_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="저장후 결과 출력" />
 
             </LinearLayout>
 

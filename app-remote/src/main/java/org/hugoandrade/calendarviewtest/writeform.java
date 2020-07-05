@@ -43,6 +43,36 @@ public class writeform extends AppCompatActivity {
                 startActivityForResult(intent, GET_GALLERY_IMAGE);
             }
         });
+        imageview= (ImageView) findViewById(R.id.addimg2);
+        imageview.setOnClickListener(new View.OnClickListener() {
+
+
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                startActivityForResult(intent, GET_GALLERY_IMAGE);
+            }
+        });
+        imageview= (ImageView) findViewById(R.id.addimg3);
+        imageview.setOnClickListener(new View.OnClickListener() {
+
+
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                startActivityForResult(intent, GET_GALLERY_IMAGE);
+            }
+        });
+        imageview= (ImageView) findViewById(R.id.addimg4);
+        imageview.setOnClickListener(new View.OnClickListener() {
+
+
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+                startActivityForResult(intent, GET_GALLERY_IMAGE);
+            }
+        });
 
 
         ImageView tabb = (ImageView) findViewById(R.id.tabbar);
