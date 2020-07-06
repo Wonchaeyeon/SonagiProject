@@ -27,13 +27,12 @@ public class writeform extends AppCompatActivity {
     private SharedPreferences sp;
 
     public ImageButton ib1;
-    long now = System.currentTimeMillis();
-    Date mDate = new Date(now);
-    SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd");
-    String getTime = simpleDate.format(mDate);
 
     private final int GET_GALLERY_IMAGE = 200;
     private ImageView imageview;
+
+    private TextView today;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,11 +40,14 @@ public class writeform extends AppCompatActivity {
         sp = getSharedPreferences("myFile", Activity.MODE_PRIVATE);
         String diary = sp.getString("20200706d", "");
 
-
-
         if(diary != ""){
             ((EditText) findViewById(R.id.edit)).setText(diary);
         }
+
+//    today = (TextView) findViewById(R.id.todayview);
+//        Intent incomingIntent=getIntent();
+//        String date = incomingIntent.getStringExtra("date");
+//        today.setText(date);
 
         ImageView backbutton = (ImageView) findViewById(R.id.backb);
         backbutton.setOnClickListener(new View.OnClickListener() {

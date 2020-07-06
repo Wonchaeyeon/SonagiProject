@@ -15,24 +15,28 @@
     android:background="?android:attr/selectableItemBackground">
 
     <View
+        android:fontFamily="@font/gmarket"
         android:id="@+id/rcl_calendar_event_icon"
         android:layout_width="4dp"
         android:layout_height="4dp"
         android:background="?attr/colorPrimary"
         android:layout_marginTop="9dp"
         />
-    
+
     <Space
+        android:fontFamily="@font/gmarket"
         android:layout_width="13dp"
         android:layout_height="0dp" />
 
     <LinearLayout
+        android:fontFamily="@font/gmarket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_vertical">
 
         <TextView
+            android:fontFamily="@font/gmarket"
             android:id="@+id/tv_calendar_event_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,6 +47,7 @@
             tools:text="Exercise Plan" />
 
         <TextView
+            android:fontFamily="@font/gmarket"
             android:id="@+id/tv_calendar_event_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,7 +31,8 @@ public class CalendarViewWithNotesActivitySDK21 extends AppCompatActivity {
 
     private final static int CREATE_EVENT_REQUEST_CODE = 100;
 
-
+//    private static final String TAG = "CalendarViewWithNotesActivitySDK21";
+//    private CalendarView mCal;
 
     private String[] mShortMonths;
     private CalendarView mCalendarView;
@@ -51,11 +54,25 @@ public class CalendarViewWithNotesActivitySDK21 extends AppCompatActivity {
 
 
 
+//        mCal = (CalendarView) findViewById(R.id.calendarView);
+//        mCal.setOnDateChangeListener(new android.widget.CalendarView.OnDateChangeListener() {
+//            @Override
+//            public void onSelectedDayChange(@NonNull android.widget.CalendarView calendarView, int i, int i1, int i2) {
+//                String date = (i1+1)+"/"+i2+"/"+i;
+//                Log.d(TAG, "onSelectedDayChange: mm/dd/yyyy" +date);
+//
+//                Intent intent =new Intent(CalendarViewWithNotesActivitySDK21.this, writeform.class);
+//                intent.putExtra("date",date);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private void initializeUI() {
 
         setContentView(R.layout.activity_calendar_view_with_notes_sdk_21);
+
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

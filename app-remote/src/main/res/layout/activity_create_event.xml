@@ -15,6 +15,7 @@
         android:orientation="vertical">
 
         <android.support.design.widget.AppBarLayout
+            android:fontFamily="@font/gmarket"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay"
@@ -90,6 +91,7 @@
                         android:paddingBottom="5.5dp">
 
                         <EditText
+
                             android:id="@+id/et_event_title"
                             style="@style/createEventItemTextView"
                             android:layout_width="0dp"
@@ -141,6 +143,7 @@
                         android:paddingBottom="6.5dp">
 
                         <TextView
+                            android:fontFamily="@font/gmarket"
                             android:id="@+id/tv_completed"
                             style="@style/createEventItemTextView"
                             android:layout_width="0dp"
@@ -238,6 +241,5 @@
         </android.support.v4.widget.NestedScrollView>
 
     </LinearLayout>
-
 
 </android.support.design.widget.CoordinatorLayout>

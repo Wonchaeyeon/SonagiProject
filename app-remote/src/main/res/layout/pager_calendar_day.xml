@@ -10,11 +10,13 @@
     app:cardBackgroundColor="#fff">
 
     <LinearLayout
+        android:fontFamily="@font/gmarket"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
+            android:fontFamily="@font/gmarket"
             android:id="@+id/tv_calendar_day"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,6 +30,7 @@
             tools:text="1"/>
 
         <TextView
+            android:fontFamily="@font/gmarket"
             android:id="@+id/tv_calendar_day_of_week"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,6 +42,7 @@
             tools:text="Wednesday"/>
 
         <View
+            android:fontFamily="@font/gmarket"
             android:layout_marginTop="10dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
@@ -47,11 +51,13 @@
             android:background="?attr/colorPrimary"/>
 
         <RelativeLayout
+            android:fontFamily="@font/gmarket"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
             <LinearLayout
+                android:fontFamily="@font/gmarket"
                 android:visibility="gone"
                 android:id="@+id/rl_no_events"
                 android:layout_centerInParent="true"
@@ -68,6 +74,7 @@
                     android:src="@drawable/ic_calendar"/>
 
                 <TextView
+                    android:fontFamily="@font/gmarket"
                     android:id="@+id/tv_no_events_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -79,11 +86,13 @@
 
 
             <android.support.v7.widget.RecyclerView
+                android:fontFamily="@font/gmarket"
                 android:id="@+id/rv_calendar_events"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
             <android.support.design.widget.FloatingActionButton
+                android:fontFamily="@font/gmarket"
                 android:id="@+id/fab_create_event"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,5 +108,6 @@
         </RelativeLayout>
 
     </LinearLayout>
+
 
 </android.support.v7.widget.CardView>
