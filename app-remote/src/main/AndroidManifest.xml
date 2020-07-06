@@ -21,11 +21,15 @@
         <activity
             android:name=".ui.login.Login"
             android:label="@string/title_activity_login" />
-        <activity android:name=".loading" />
+        <activity android:name=".loading" >
+
+        </activity>
         <activity android:name=".writeform" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
         <activity
             android:name=".SimpleCalendarViewActivity"
             android:label="@string/title_activity_simple_calendar_view"
@@ -62,12 +66,12 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.hugoandrade.calendarviewtest.MainActivity" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".CreateEventActivity"

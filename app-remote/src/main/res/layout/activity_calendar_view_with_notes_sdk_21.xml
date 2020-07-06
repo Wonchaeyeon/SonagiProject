@@ -27,20 +27,20 @@
     </android.support.design.widget.AppBarLayout>
 
     <org.hugoandrade.calendarviewlib.CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fontFamily="@font/gmarket"
-        app:content_background_color="#fff"
-        app:current_day_circle_enable="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:month_header_show="false"
-        app:month_header_text_color="#CD9393"
-        app:offset_day_text_color="#FB8484"
-        app:week_header_background_color="#E8D9FF"
-        app:week_header_movable="true"
-        app:week_header_offset_day_text_color="#FB8484"
-        app:week_header_text_color="?attr/colorPrimary" />
+    android:id="@+id/calendarView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fontFamily="@font/gmarket"
+    app:content_background_color="#fff"
+    app:current_day_circle_enable="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:month_header_show="false"
+    app:month_header_text_color="#CD9393"
+    app:offset_day_text_color="#FB8484"
+    app:week_header_background_color="#E8D9FF"
+    app:week_header_movable="true"
+    app:week_header_offset_day_text_color="#FB8484"
+    app:week_header_text_color="?attr/colorPrimary" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

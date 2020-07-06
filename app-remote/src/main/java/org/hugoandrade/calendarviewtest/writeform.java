@@ -1,6 +1,8 @@
 package org.hugoandrade.calendarviewtest;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,20 +10,30 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.hugoandrade.calendarviewlib.CalendarView;
+import org.hugoandrade.calendarviewtest.data.Event;
+import org.hugoandrade.calendarviewtest.uihelpers.CalendarDialog;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 public class writeform extends AppCompatActivity {
     private SharedPreferences sp;
@@ -32,6 +44,11 @@ public class writeform extends AppCompatActivity {
     private ImageView imageview;
 
     private TextView today;
+    String pattern = "yyyy-MM-dd";
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+
+    String date = simpleDateFormat.format(new Date());
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +65,12 @@ public class writeform extends AppCompatActivity {
 //        Intent incomingIntent=getIntent();
 //        String date = incomingIntent.getStringExtra("date");
 //        today.setText(date);
+
+
+
+        today = (TextView) findViewById(R.id.todayview);
+        today.setText(date);
+
 
         ImageView backbutton = (ImageView) findViewById(R.id.backb);
         backbutton.setOnClickListener(new View.OnClickListener() {
@@ -134,6 +157,9 @@ public class writeform extends AppCompatActivity {
 
 
     }
+
+
+
 
     //이미지 불러오기
     @Override

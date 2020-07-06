@@ -97,7 +97,6 @@ public class CreateEventActivity extends AppCompatActivity {
 
         initializeUI();
 
-
         Button loadbutton = (Button) findViewById(R.id.go);
 
         loadbutton.setOnClickListener(new View.OnClickListener() {

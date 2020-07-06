@@ -1,6 +1,7 @@
 package org.hugoandrade.calendarviewtest;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setUKLocale(this);
 
         initializeUI();
+
     }
 
     private void initializeUI() {

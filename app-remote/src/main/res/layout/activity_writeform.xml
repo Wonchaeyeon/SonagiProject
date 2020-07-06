@@ -196,10 +196,6 @@
             </LinearLayout>
         </FrameLayout>
 
-
-
-
-
         <TextView
             android:id="@+id/todayview"
             android:layout_width="match_parent"
