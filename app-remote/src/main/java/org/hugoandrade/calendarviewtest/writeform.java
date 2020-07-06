@@ -40,7 +40,7 @@ public class writeform extends AppCompatActivity {
         sp = getSharedPreferences("myFile", Activity.MODE_PRIVATE);
         String diary = sp.getString("20200706d", "");
 
-        if(diary != ""){
+        if (diary != "") {
             ((EditText) findViewById(R.id.edit)).setText(diary);
         }
 
@@ -57,7 +57,7 @@ public class writeform extends AppCompatActivity {
             }
         });
 
-        imageview= (ImageView) findViewById(R.id.addimg);
+        imageview = (ImageView) findViewById(R.id.addimg);
         imageview.setOnClickListener(new View.OnClickListener() {
 
 
@@ -67,7 +67,7 @@ public class writeform extends AppCompatActivity {
                 startActivityForResult(intent, GET_GALLERY_IMAGE);
             }
         });
-        imageview= (ImageView) findViewById(R.id.addimg2);
+        imageview = (ImageView) findViewById(R.id.addimg2);
         imageview.setOnClickListener(new View.OnClickListener() {
 
 
@@ -77,7 +77,7 @@ public class writeform extends AppCompatActivity {
                 startActivityForResult(intent, GET_GALLERY_IMAGE);
             }
         });
-        imageview= (ImageView) findViewById(R.id.addimg3);
+        imageview = (ImageView) findViewById(R.id.addimg3);
         imageview.setOnClickListener(new View.OnClickListener() {
 
 
@@ -87,7 +87,7 @@ public class writeform extends AppCompatActivity {
                 startActivityForResult(intent, GET_GALLERY_IMAGE);
             }
         });
-        imageview= (ImageView) findViewById(R.id.addimg4);
+        imageview = (ImageView) findViewById(R.id.addimg4);
         imageview.setOnClickListener(new View.OnClickListener() {
 
 
@@ -133,7 +133,6 @@ public class writeform extends AppCompatActivity {
         });
 
 
-
     }
 
     //이미지 불러오기
@@ -162,17 +161,14 @@ public class writeform extends AppCompatActivity {
 //    }
 
 
-
     public void onClick(View v) {
         SharedPreferences.Editor editor = sp.edit();
 
-        EditText editText = (EditText)findViewById(R.id.edit);
+        EditText editText = (EditText) findViewById(R.id.edit);
         String strSaveData = editText.getText().toString();
 
 
-        if (v.getId() == R.id.upBtn) {
-            finish();
-        } else if (v.getId() == R.id.saveBtn) {
+        if (v.getId() == R.id.saveBtn) {
 
             editor.putString("20200706f", "g111");
             editor.putString("20200706d", strSaveData);
@@ -181,11 +177,8 @@ public class writeform extends AppCompatActivity {
             finish();
         }
 
-    }
-
-
-
 
     }
+}
 
 

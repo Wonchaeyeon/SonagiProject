@@ -197,38 +197,7 @@
         </FrameLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/saveBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#30294d"
-                android:onClick="onClick"
-                android:text="@string/saveStr"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit"
-                android:fontFamily="@font/gmarket"/>
-
-            <Button
-                android:id="@+id/upBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#30294d"
-                android:text="@string/updStr"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBaseline_toBaselineOf="@+id/saveBtn"
-                app:layout_constraintEnd_toStartOf="@+id/delBtn"
-                app:layout_constraintStart_toStartOf="parent"
-                android:fontFamily="@font/gmarket"/>
-        </LinearLayout>
 
 
         <TextView
@@ -243,15 +212,14 @@
         <EditText
             android:id="@+id/edit"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="409dp"
             android:ems="10"
+            android:fontFamily="@font/gmarket"
             android:gravity="top"
             android:hint="+ 오늘 하루를 기록해보세요."
             android:inputType="textMultiLine"
             android:privateImeOptions="defaultInputmode=korean"
-            android:textColorLink="#DF8585"
-            android:fontFamily="@font/gmarket"
-            />
+            android:textColorLink="#DF8585" />
 
 
     </LinearLayout>
@@ -266,7 +234,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/middle">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#30294d"
+                android:fontFamily="@font/gmarket"
+                android:onClick="onClick"
+                android:text="@string/saveStr"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -307,6 +294,7 @@
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/addimg" />
         </LinearLayout>
+
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
