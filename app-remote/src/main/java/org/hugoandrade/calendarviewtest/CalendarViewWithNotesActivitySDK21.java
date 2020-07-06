@@ -29,6 +29,8 @@ public class CalendarViewWithNotesActivitySDK21 extends AppCompatActivity {
 
     private final static int CREATE_EVENT_REQUEST_CODE = 100;
 
+
+
     private String[] mShortMonths;
     private CalendarView mCalendarView;
     private CalendarDialog mCalendarDialog;
@@ -46,6 +48,9 @@ public class CalendarViewWithNotesActivitySDK21 extends AppCompatActivity {
         mShortMonths = new DateFormatSymbols().getShortMonths();
 
         initializeUI();
+
+
+
     }
 
     private void initializeUI() {

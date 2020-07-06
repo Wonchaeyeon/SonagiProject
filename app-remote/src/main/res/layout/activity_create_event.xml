@@ -9,6 +9,7 @@
     android:focusableInTouchMode="true">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -16,8 +17,8 @@
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:elevation="0dp"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -26,26 +27,28 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay"
 
                 app:subtitleTextAppearance="@style/AppTheme.SubTitleText"
-                app:titleTextAppearance="@style/AppTheme.TitleText"/>
+                app:titleTextAppearance="@style/AppTheme.TitleText" />
 
             <LinearLayout
                 android:id="@+id/ll_header"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:orientation="horizontal"
-                android:background="?attr/colorPrimary">
+                android:background="?attr/colorPrimary"
+                android:orientation="horizontal">
 
                 <TextView
-                    style="@style/createEventToolbarItems"
                     android:id="@+id/tv_cancel"
-                    android:text="@string/cancel"
-                    android:background="#30294d"/>
+                    android:fontFamily="@font/gmarket"
+                    style="@style/createEventToolbarItems"
+                    android:background="#30294d"
+                    android:text="@string/cancel" />
 
                 <TextView
-                    style="@style/createEventToolbarItems"
                     android:id="@+id/tv_save"
-                    android:text="@string/save"
-                    android:background="#30294d"/>
+                    android:fontFamily="@font/gmarket"
+                    style="@style/createEventToolbarItems"
+                    android:background="#30294d"
+                    android:text="@string/save" />
 
             </LinearLayout>
 
@@ -59,58 +62,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:clipToPadding="false">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="14dp"
-                    android:paddingEnd="14dp" >
-
-                    <ImageView
-                        style="@style/createEventIconStyle"
-                        android:src="@drawable/ic_title"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginBottom="1dp"
-                        android:paddingTop="6dp"
-                        android:paddingBottom="5.5dp"
-                        android:paddingStart="4dp"
-                        android:paddingEnd="4dp">
-
-                        <EditText
-                            android:id="@+id/et_event_title"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/title"
-                            android:textColor="#252525"
-                            android:paddingStart="6dp"
-                            android:paddingEnd="6dp"
-                            style="@style/createEventItemTextView" />
-
-                        <android.support.v7.widget.CardView
-                            android:id="@+id/cardView_event_color"
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_margin="8.5dp"
-                            app:cardBackgroundColor="?attr/colorPrimary"
-                            app:cardCornerRadius="2dp"
-                            android:src="@drawable/ic_title"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <View style="@style/createEventSeparator"
-                    android:layout_marginStart="57dp"/>
+                android:clipToPadding="false"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -122,39 +75,47 @@
 
                     <ImageView
                         style="@style/createEventIconStyle"
-                        android:src="@drawable/ic_check"/>
+                        android:src="@drawable/ic_title" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
                         android:orientation="horizontal"
-                        android:paddingTop="7dp"
-                        android:paddingBottom="6.5dp"
                         android:paddingStart="4dp"
-                        android:paddingEnd="4dp">
+                        android:paddingTop="6dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="5.5dp">
 
-                        <TextView
-                            android:id="@+id/tv_completed"
+                        <EditText
+                            android:id="@+id/et_event_title"
+                            style="@style/createEventItemTextView"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/completed"
-                            android:textColor="#252525"
+                            android:fontFamily="@font/gmarket"
+                            android:hint="@string/title"
                             android:paddingStart="6dp"
                             android:paddingEnd="6dp"
-                            style="@style/createEventItemTextView" />
+                            android:textColor="#252525" />
 
-                        <Switch
-                            android:id="@+id/checkbox_completed"
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"/>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardView_event_color"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_margin="8.5dp"
+                            android:src="@drawable/ic_title"
+                            app:cardBackgroundColor="?attr/colorPrimary"
+                            app:cardCornerRadius="2dp" />
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-                <View style="@style/createEventSeparator"
-                    android:layout_marginStart="57dp"/>
+                <View
+                    style="@style/createEventSeparator"
+                    android:layout_marginStart="57dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -162,11 +123,58 @@
                     android:layout_gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="14dp"
-                    android:paddingEnd="14dp" >
+                    android:paddingEnd="14dp">
 
                     <ImageView
                         style="@style/createEventIconStyle"
-                        android:src="@drawable/ic_clock"/>
+                        android:src="@drawable/ic_check" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gmarket"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="4dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="6.5dp">
+
+                        <TextView
+                            android:id="@+id/tv_completed"
+                            style="@style/createEventItemTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:text="@string/completed"
+                            android:textColor="#252525" />
+
+                        <Switch
+                            android:id="@+id/checkbox_completed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gmarket" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/createEventSeparator"
+                    android:layout_marginStart="57dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <ImageView
+                        style="@style/createEventIconStyle"
+                        android:src="@drawable/ic_clock" />
 
                     <TextView
                         android:id="@+id/tv_date"
@@ -176,12 +184,13 @@
                         android:layout_gravity="center_vertical"
                         android:layout_margin="0dp"
                         android:background="?selectableItemBackground"
-                        android:textColor="#252525"
+                        android:fontFamily="@font/gmarket"
                         android:gravity="end"
-                        android:paddingTop="6.5dp"
-                        android:paddingBottom="6.5dp"
-                        android:paddingEnd="8dp"
                         android:paddingStart="8dp"
+                        android:paddingTop="6.5dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="6.5dp"
+                        android:textColor="#252525"
                         tools:text="tuesday, 27/03   17:00" />
 
 
@@ -189,39 +198,46 @@
 
                 <View style="@style/createEventSeparator" />
 
-                <Button
-                    android:id="@+id/go"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#30294d"
-                    android:onClick="writeOnclick"
-                    android:text="일기 작성하기"
-                    android:textColor="#FFFFFF" />
+                <!--                <TextView-->
+                <!--                    android:id="@+id/feelingview"-->
+                <!--                    android:layout_width="415dp"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_marginTop="30dp"-->
+                <!--                    android:hint="오늘의 기분"-->
+                <!--                    android:fontFamily="@font/gmarket"/>-->
 
-                <Button
-                    android:id="@+id/load"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#30294d"
-                    android:onClick="loadData"
-                    android:text="일기 확인하기"
-                    android:textColor="#FFFFFF" />
-
+                <!--                <TextView-->
+                <!--                    android:id="@+id/weatherview"-->
+                <!--                    android:layout_width="415dp"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:hint="오늘의 날씨"-->
+                <!--                    android:fontFamily="@font/gmarket"/>-->
                 <TextView
                     android:id="@+id/load_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="작성된 내용이 없습니다." />
-                <TextView
-                    android:id="@+id/save_text_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:hint="저장후 결과 출력" />
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/gmarket"
+                    android:hint=" 작성된 내용이 없습니다."
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/go"
+                    android:layout_width="314dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_margin="310dp"
+                    android:background="@drawable/ha"
+                    android:fontFamily="@font/gmarket"
+                    android:onClick="writeOnclick" />
+
 
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
 
     </LinearLayout>
+
 
 </android.support.design.widget.CoordinatorLayout>

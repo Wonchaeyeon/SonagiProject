@@ -17,7 +17,8 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="84dp"
+            android:layout_height="100dp"
+            android:fontFamily="@font/gmarket"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:titleTextAppearance="@style/AppTheme.TitleText"
             app:subtitleTextAppearance="@style/AppTheme.SubTitleText"
@@ -29,24 +30,31 @@
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fontFamily="@font/gmarket"
         app:content_background_color="#fff"
-        app:week_header_background_color="#fff"
-        app:week_header_text_color="?attr/colorPrimary"
         app:current_day_circle_enable="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:month_header_show="false"
-        app:week_header_movable="false" />
+        app:month_header_text_color="#CD9393"
+        app:offset_day_text_color="#FB8484"
+        app:week_header_background_color="#E8D9FF"
+        app:week_header_movable="true"
+        app:week_header_offset_day_text_color="#FB8484"
+        app:week_header_text_color="?attr/colorPrimary" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
+        android:fontFamily="@font/gmarket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:tint="#fff"
+        android:backgroundTint="#aa5f5e"
         app:elevation="0dp"
         app:srcCompat="@android:drawable/ic_input_add"
-    android:backgroundTint="#aa5f5e"
+
         />
+
 
 </android.support.design.widget.CoordinatorLayout>

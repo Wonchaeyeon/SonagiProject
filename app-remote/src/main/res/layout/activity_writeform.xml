@@ -208,12 +208,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#30294d"
-                android:onClick="saveData"
+                android:onClick="onClick"
                 android:text="@string/saveStr"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit" />
+                app:layout_constraintTop_toBottomOf="@+id/edit"
+                android:fontFamily="@font/gmarket"/>
 
             <Button
                 android:id="@+id/upBtn"
@@ -225,15 +226,20 @@
                 android:textColor="#FFFFFF"
                 app:layout_constraintBaseline_toBaselineOf="@+id/saveBtn"
                 app:layout_constraintEnd_toStartOf="@+id/delBtn"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="@font/gmarket"/>
         </LinearLayout>
 
 
         <TextView
-            android:id="@+id/save_text_view"
+            android:id="@+id/todayview"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:hint="저장후 결과 출력" />
+            android:hint="오늘 날짜 출력"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/gmarket"/>
+
         <EditText
             android:id="@+id/edit"
             android:layout_width="match_parent"
@@ -244,6 +250,7 @@
             android:inputType="textMultiLine"
             android:privateImeOptions="defaultInputmode=korean"
             android:textColorLink="#DF8585"
+            android:fontFamily="@font/gmarket"
             />
 
 

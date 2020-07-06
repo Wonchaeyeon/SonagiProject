@@ -17,10 +17,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.hugoandrade.calendarviewtest.data.Event;
 import org.hugoandrade.calendarviewtest.utils.ColorUtils;
@@ -31,7 +34,9 @@ import java.util.Locale;
 
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class CreateEventActivity extends AppCompatActivity {
+    private SharedPreferences sp;
 
+    private int REQUEST_TEST = 1;
     public static final int ACTION_DELETE = 1;
     public static final int ACTION_EDIT = 2;
     public static final int ACTION_CREATE = 3;
@@ -61,6 +66,7 @@ public class CreateEventActivity extends AppCompatActivity {
     private View mHeader;
 
 
+
     public static Intent makeIntent(Context context, @NonNull Calendar calendar) {
         return new Intent(context, CreateEventActivity.class).putExtra(INTENT_EXTRA_CALENDAR, calendar);
     }
@@ -84,12 +90,24 @@ public class CreateEventActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        sp = getSharedPreferences("myFile", Activity.MODE_PRIVATE);
         setResult(RESULT_CANCELED);
 
         extractDataFromIntentAndInitialize();
 
         initializeUI();
+
+
+        Button loadbutton = (Button) findViewById(R.id.go);
+
+        loadbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreateEventActivity.this, writeform.class);
+                startActivityForResult(intent, REQUEST_TEST);
+                // startActivityForResult(intent);
+            }
+        });
 
     }
 
@@ -115,6 +133,9 @@ public class CreateEventActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+//Onclick 함수 위치
+
 
     private void extractDataFromIntentAndInitialize() {
 
@@ -298,12 +319,16 @@ public class CreateEventActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == SET_DATE_AND_TIME_REQUEST_CODE) {
-            if (resultCode == RESULT_OK) {
+            if (requestCode == REQUEST_TEST) {
+                if (resultCode == RESULT_OK) {
+                    Toast.makeText(CreateEventActivity.this, "Result: " + data.getStringExtra("result"), Toast.LENGTH_SHORT).show();
+                    mCalendar = SelectDateAndTimeActivity.extractCalendarFromIntent(data);
+                    mDateTextView.setText(dateFormat.format(mCalendar.getTime()));
 
-                mCalendar = SelectDateAndTimeActivity.extractCalendarFromIntent(data);
-                mDateTextView.setText(dateFormat.format(mCalendar.getTime()));
-
-                setupEditMode();
+                    setupEditMode();
+                } else {
+                    Toast.makeText(CreateEventActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                }
             }
             return;
         }
@@ -331,6 +356,17 @@ public class CreateEventActivity extends AppCompatActivity {
     }
 
 
-    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // 여기서 값
+        String diary = sp.getString("20200706d", "" );
+
+        if(diary != ""){
+            ((TextView) findViewById(R.id.load_text_view)).setText(diary);
+
+        }
+    }
+}
 

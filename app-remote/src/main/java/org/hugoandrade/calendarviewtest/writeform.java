@@ -1,5 +1,6 @@
 package org.hugoandrade.calendarviewtest;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,13 +10,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.hugoandrade.calendarviewlib.CalendarView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class writeform extends AppCompatActivity {
+    private SharedPreferences sp;
+
+    public ImageButton ib1;
+    long now = System.currentTimeMillis();
+    Date mDate = new Date(now);
+    SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd");
+    String getTime = simpleDate.format(mDate);
 
     private final int GET_GALLERY_IMAGE = 200;
     private ImageView imageview;
@@ -23,7 +38,14 @@ public class writeform extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writeform);
+        sp = getSharedPreferences("myFile", Activity.MODE_PRIVATE);
+        String diary = sp.getString("20200706d", "");
 
+
+
+        if(diary != ""){
+            ((EditText) findViewById(R.id.edit)).setText(diary);
+        }
 
         ImageView backbutton = (ImageView) findViewById(R.id.backb);
         backbutton.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +132,6 @@ public class writeform extends AppCompatActivity {
 
 
 
-
     }
 
     //이미지 불러오기
@@ -124,19 +145,45 @@ public class writeform extends AppCompatActivity {
         }
     }
 
-    public void saveData(View view)
-    {
-        EditText editText = (EditText) findViewById(R.id.edit);
+//    public void saveData(View view)
+//    {
+//        EditText editText = (EditText) findViewById(R.id.edit);
+//        String strSaveData = editText.getText().toString();
+//
+//        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPref.edit();
+//        editor.putString(getString(R.string.savedata_private_key), strSaveData);
+//        editor.commit();
+//
+//        TextView textView = (TextView) findViewById(R.id.save_text_view);
+//        textView.setText(strSaveData);
+//    }
+
+
+
+    public void onClick(View v) {
+        SharedPreferences.Editor editor = sp.edit();
+
+        EditText editText = (EditText)findViewById(R.id.edit);
         String strSaveData = editText.getText().toString();
 
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString(getString(R.string.savedata_private_key), strSaveData);
-        editor.commit();
 
-        TextView textView = (TextView) findViewById(R.id.save_text_view);
-        textView.setText(strSaveData);
+        if (v.getId() == R.id.upBtn) {
+            finish();
+        } else if (v.getId() == R.id.saveBtn) {
+
+            editor.putString("20200706f", "g111");
+            editor.putString("20200706d", strSaveData);
+
+            editor.commit();
+            finish();
+        }
+
     }
 
 
-}
+
+
+    }
+
+
