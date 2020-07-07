@@ -31,7 +31,8 @@ public class writeform extends AppCompatActivity {
     private String mDate;
     private TextView today;
 
-
+    ImageButton angry, happy, hurt, crying, sleeping, heart;
+    ImageButton sunshine,cloud,snow,lightning,light,wind;
 
     private final static SimpleDateFormat writedateFormat
             = new SimpleDateFormat("MM/dd  EEEE", Locale.getDefault());
@@ -45,6 +46,21 @@ public class writeform extends AppCompatActivity {
 
         sp = getSharedPreferences("myFile", Activity.MODE_PRIVATE);
         String diary = sp.getString(mDate +"d", "");
+
+        angry = findViewById(R.id.angry);
+        happy = findViewById(R.id.happy);
+        hurt = findViewById(R.id.hurt);
+        crying = findViewById(R.id.crying);
+        sleeping = findViewById(R.id.sleeping);
+        heart = findViewById(R.id.heart);
+
+        sunshine = findViewById(R.id.sunshine);
+        cloud = findViewById(R.id.cloud);
+        snow = findViewById(R.id.snow);
+        lightning = findViewById(R.id.lightning);
+        light = findViewById(R.id.light);
+        wind = findViewById(R.id.wind);
+
 
         if (diary != "") {
             ((EditText) findViewById(R.id.edit)).setText(diary);
@@ -133,8 +149,138 @@ public class writeform extends AppCompatActivity {
                 popup.show();
             }
         });
+        //기분
+        angry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                angry.setImageResource(R.drawable.circle);
+                happy.setImageResource(R.drawable.happy);
+                hurt.setImageResource(R.drawable.hurt);
+                crying.setImageResource(R.drawable.crying);
+                sleeping.setImageResource(R.drawable.sleeping);
+                heart.setImageResource(R.drawable.heart);
+            }
+        });
+        happy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                happy.setImageResource(R.drawable.circle);
+                angry.setImageResource(R.drawable.angry);
+                hurt.setImageResource(R.drawable.hurt);
+                crying.setImageResource(R.drawable.crying);
+                sleeping.setImageResource(R.drawable.sleeping);
+                heart.setImageResource(R.drawable.heart);
+            }
+        });
+        hurt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                hurt.setImageResource(R.drawable.circle);
+                angry.setImageResource(R.drawable.angry);
+                happy.setImageResource(R.drawable.happy);
+                crying.setImageResource(R.drawable.crying);
+                sleeping.setImageResource(R.drawable.sleeping);
+                heart.setImageResource(R.drawable.heart);
+            }
+        });
+        crying.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                crying.setImageResource(R.drawable.circle);
+                angry.setImageResource(R.drawable.angry);
+                happy.setImageResource(R.drawable.happy);
+                hurt.setImageResource(R.drawable.hurt);
+                sleeping.setImageResource(R.drawable.sleeping);
+                heart.setImageResource(R.drawable.heart);
+            }
+        });
+        sleeping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sleeping.setImageResource(R.drawable.circle);
+                angry.setImageResource(R.drawable.angry);
+                happy.setImageResource(R.drawable.happy);
+                hurt.setImageResource(R.drawable.hurt);
+                crying.setImageResource(R.drawable.crying);
+                heart.setImageResource(R.drawable.heart);
+            }
+        });
+        heart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                heart.setImageResource(R.drawable.circle);
+                angry.setImageResource(R.drawable.angry);
+                happy.setImageResource(R.drawable.happy);
+                hurt.setImageResource(R.drawable.hurt);
+                crying.setImageResource(R.drawable.crying);
+                sleeping.setImageResource(R.drawable.sleeping);
+            }
+        });
 
+//날씨
 
+        sunshine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sunshine.setImageResource(R.drawable.circle);
+                cloud.setImageResource(R.drawable.cloud);
+                snow.setImageResource(R.drawable.snow);
+                lightning.setImageResource(R.drawable.lightning);
+                light.setImageResource(R.drawable.light);
+                wind.setImageResource(R.drawable.wind);
+            }
+        });
+        cloud.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cloud.setImageResource(R.drawable.circle);
+                sunshine.setImageResource(R.drawable.sunshine);
+                snow.setImageResource(R.drawable.snow);
+                lightning.setImageResource(R.drawable.lightning);
+                light.setImageResource(R.drawable.light);
+                wind.setImageResource(R.drawable.wind);
+            }
+        });snow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                snow.setImageResource(R.drawable.circle);
+                sunshine.setImageResource(R.drawable.sunshine);
+                cloud.setImageResource(R.drawable.cloud);
+                lightning.setImageResource(R.drawable.lightning);
+                light.setImageResource(R.drawable.light);
+                wind.setImageResource(R.drawable.wind);
+            }
+        });lightning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lightning.setImageResource(R.drawable.circle);
+                sunshine.setImageResource(R.drawable.sunshine);
+                cloud.setImageResource(R.drawable.cloud);
+                snow.setImageResource(R.drawable.snow);
+                light.setImageResource(R.drawable.light);
+                wind.setImageResource(R.drawable.wind);
+            }
+        });light.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                light.setImageResource(R.drawable.circle);
+                sunshine.setImageResource(R.drawable.sunshine);
+                cloud.setImageResource(R.drawable.cloud);
+                snow.setImageResource(R.drawable.snow);
+                lightning.setImageResource(R.drawable.lightning);
+                wind.setImageResource(R.drawable.wind);
+            }
+        });wind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                wind.setImageResource(R.drawable.circle);
+                sunshine.setImageResource(R.drawable.sunshine);
+                cloud.setImageResource(R.drawable.cloud);
+                snow.setImageResource(R.drawable.snow);
+                lightning.setImageResource(R.drawable.lightning);
+                light.setImageResource(R.drawable.light);
+            }
+        });
     }
 
 

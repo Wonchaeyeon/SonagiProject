@@ -18,11 +18,11 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:background="@drawable/back"
             android:fontFamily="@font/gmarket"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:titleTextAppearance="@style/AppTheme.TitleText"
             app:subtitleTextAppearance="@style/AppTheme.SubTitleText"
-            android:background="#30294d"/>
+            app:titleTextAppearance="@style/AppTheme.TitleText" />
 
     </android.support.design.widget.AppBarLayout>
 
