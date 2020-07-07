@@ -48,7 +48,13 @@ public class CreateEventActivity extends AppCompatActivity {
     private static final int SET_DATE_AND_TIME_REQUEST_CODE = 200;
 
     private final static SimpleDateFormat dateFormat
-            = new SimpleDateFormat("EEEE, dd/MM    HH:mm", Locale.getDefault());
+            = new SimpleDateFormat("YYYY.MM.dd(EEEE) HH:mm", Locale.getDefault());
+
+    private final static SimpleDateFormat writedateFormat
+            = new SimpleDateFormat("MM/dd  EEEE", Locale.getDefault());
+
+    private final static SimpleDateFormat FILENAME_FORMAT
+            = new SimpleDateFormat("YYMMdd", Locale.getDefault());
 
     private Event mOriginalEvent;
 
@@ -58,7 +64,7 @@ public class CreateEventActivity extends AppCompatActivity {
     private int mColor;
 
     private boolean isViewMode = true;
-
+    private String mDate;
     private EditText mTitleView;
     private Switch mIsCompleteCheckBox;
     private TextView mDateTextView;
@@ -103,12 +109,16 @@ public class CreateEventActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CreateEventActivity.this, writeform.class);
-                startActivityForResult(intent, REQUEST_TEST);
-                // startActivityForResult(intent);
+                 mDate = FILENAME_FORMAT.format(mCalendar.getTime()).toString();
+                intent.putExtra("date",mDate);
+                //Toast.makeText(getApplicationContext(),FILENAME_FORMAT.format(mCalendar.getTime()).toString(), Toast.LENGTH_SHORT).show();
+                //startActivityForResult(intent, REQUEST_TEST);
+                startActivity(intent);
             }
         });
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -200,6 +210,7 @@ public class CreateEventActivity extends AppCompatActivity {
 
         mDateTextView = findViewById(R.id.tv_date);
         mDateTextView.setText(dateFormat.format(mCalendar.getTime()));
+//    Log.d("wonn",""+dateFormat.format(mCalendar.getTime()));
         mDateTextView.setOnClickListener(new View.OnClickListener() {
 
             @SuppressLint("RestrictedApi")
@@ -295,7 +306,6 @@ public class CreateEventActivity extends AppCompatActivity {
         int action = mOriginalEvent != null ? ACTION_EDIT : ACTION_CREATE;
         String id = mOriginalEvent != null ? mOriginalEvent.getID() : generateID();
         String rawTitle = mTitleView.getText().toString().trim();
-
         mOriginalEvent = new Event(
                 id,
                 rawTitle.isEmpty() ? null : rawTitle,
@@ -340,8 +350,11 @@ public class CreateEventActivity extends AppCompatActivity {
 
     public void writeOnclick(View view)
     {
-        Intent intent = new Intent(this, writeform.class);
-        startActivity(intent);
+        Toast.makeText(this,mDateTextView.getText(), Toast.LENGTH_SHORT).show();
+
+        //Intent intent = new Intent(this, writeform.class);
+        //intent.putExtra("date", )
+        //startActivity(intent);
     }
 
 
@@ -360,7 +373,7 @@ public class CreateEventActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         // 여기서 값
-        String diary = sp.getString("20200706d", "" );
+        String diary = sp.getString(mDate+"d", "" );
 
         if(diary != ""){
             ((TextView) findViewById(R.id.load_text_view)).setText(diary);

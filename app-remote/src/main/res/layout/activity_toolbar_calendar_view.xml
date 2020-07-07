@@ -29,8 +29,8 @@
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:current_day_circle_enable="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:month_header_show="false"
         app:week_header_movable="false" />
 

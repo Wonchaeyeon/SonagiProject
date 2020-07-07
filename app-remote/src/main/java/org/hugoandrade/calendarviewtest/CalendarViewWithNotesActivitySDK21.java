@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import org.hugoandrade.calendarviewtest.data.Event;
 import org.hugoandrade.calendarviewtest.uihelpers.CalendarDialog;
@@ -139,6 +140,7 @@ public class CalendarViewWithNotesActivitySDK21 extends AppCompatActivity {
                 .create();
     }
 
+    //createActivity실행
     private void onEventSelected(Event event) {
         Activity context = CalendarViewWithNotesActivitySDK21.this;
         Intent intent = CreateEventActivity.makeIntent(context, event);

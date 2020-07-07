@@ -203,10 +203,10 @@
             android:id="@+id/todayview"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:hint="오늘 날짜 출력"
             android:textAlignment="center"
             android:textSize="18sp"
-            android:fontFamily="@font/gmarket"/>
+            android:fontFamily="@font/gmarket"
+            tools:text="07/27  Monday"/>
 
         <EditText
             android:id="@+id/edit"

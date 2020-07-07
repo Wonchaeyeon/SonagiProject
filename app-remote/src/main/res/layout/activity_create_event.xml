@@ -232,8 +232,7 @@
                     android:layout_gravity="center_vertical|center_horizontal"
                     android:layout_margin="270dp"
                     android:background="@drawable/ha"
-                    android:fontFamily="@font/gmarket"
-                    android:onClick="writeOnclick" />
+                    android:fontFamily="@font/gmarket" />
 
 
             </LinearLayout>

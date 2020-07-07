@@ -1,75 +1,54 @@
 package org.hugoandrade.calendarviewtest;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.ActivityOptions;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.hugoandrade.calendarviewlib.CalendarView;
-import org.hugoandrade.calendarviewtest.data.Event;
-import org.hugoandrade.calendarviewtest.uihelpers.CalendarDialog;
-
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 public class writeform extends AppCompatActivity {
     private SharedPreferences sp;
-
+    private TextView mDateTextView;
+    private Calendar mCalendar;
     public ImageButton ib1;
-
+    private static final int SET_DATE_AND_TIME_REQUEST_CODE = 200;
     private final int GET_GALLERY_IMAGE = 200;
     private ImageView imageview;
-
+    private String mDate;
     private TextView today;
-    String pattern = "yyyy-MM-dd";
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 
-    String date = simpleDateFormat.format(new Date());
 
+
+    private final static SimpleDateFormat writedateFormat
+            = new SimpleDateFormat("MM/dd  EEEE", Locale.getDefault());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writeform);
+        Intent intent = getIntent();
+        mDate = intent.getStringExtra("date");
+
         sp = getSharedPreferences("myFile", Activity.MODE_PRIVATE);
-        String diary = sp.getString("20200706d", "");
+        String diary = sp.getString(mDate +"d", "");
 
         if (diary != "") {
             ((EditText) findViewById(R.id.edit)).setText(diary);
         }
-
-//    today = (TextView) findViewById(R.id.todayview);
-//        Intent incomingIntent=getIntent();
-//        String date = incomingIntent.getStringExtra("date");
-//        today.setText(date);
-
-
-
-        today = (TextView) findViewById(R.id.todayview);
-        today.setText(date);
 
 
         ImageView backbutton = (ImageView) findViewById(R.id.backb);
@@ -159,8 +138,6 @@ public class writeform extends AppCompatActivity {
     }
 
 
-
-
     //이미지 불러오기
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -195,9 +172,8 @@ public class writeform extends AppCompatActivity {
 
 
         if (v.getId() == R.id.saveBtn) {
-
             editor.putString("20200706f", "g111");
-            editor.putString("20200706d", strSaveData);
+            editor.putString(mDate +"d", strSaveData);
 
             editor.commit();
             finish();
