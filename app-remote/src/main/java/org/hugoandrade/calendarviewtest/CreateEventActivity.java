@@ -143,8 +143,6 @@ public class CreateEventActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//Onclick 함수 위치
-
 
     private void extractDataFromIntentAndInitialize() {
 

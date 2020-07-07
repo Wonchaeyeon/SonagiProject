@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.hugoandrade.calendarviewtest">
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,27 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".ui.login.login"
-            android:label="@string/title_activity_login">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-        <activity
-            android:name=".ui.login.Login"
-            android:label="@string/title_activity_login" />
-        <activity android:name=".loading" >
 
-        </activity>
+
         <activity android:name=".writeform" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".SimpleCalendarViewActivity"
             android:label="@string/title_activity_simple_calendar_view"
@@ -65,13 +52,16 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.hugoandrade.calendarviewtest.MainActivity" />
+                android:value="org.hugoandrade.calendarviewtest.MainActivity" /></activity>
+        <activity android:name=".loading"
+            android:parentActivityName=".MainActivity"
+
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".CreateEventActivity"
