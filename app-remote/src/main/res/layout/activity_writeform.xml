@@ -17,9 +17,11 @@
 
         <ImageButton
             android:id="@+id/backb"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
+            android:layout_gravity="left"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginLeft="-20dp"
             android:adjustViewBounds="true"
             android:background="#00ffffff"
             android:scaleType="fitCenter"
@@ -29,7 +31,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="-40dp"
+            android:layout_marginTop="-43dp"
+            android:layout_marginRight="25dp"
+            android:fontFamily="@font/gmarket"
             android:gravity="center"
             android:text="일기 작성하기"
             android:textSize="20dp"
@@ -38,14 +42,14 @@
         <ImageButton
             android:id="@+id/tabbar"
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_gravity="right"
-            android:layout_marginTop="-40dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginTop="-52dp"
+            android:layout_marginRight="50dp"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/tabbar" />
+            app:srcCompat="@drawable/list" />
 
     </LinearLayout>
 
@@ -73,13 +77,12 @@
                 android:orientation="horizontal">
 
 
-
                 <ImageButton
                     android:id="@+id/angry"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00ffffff"
-                    android:paddingLeft="140dp"
+                    android:paddingLeft="100dp"
                     android:paddingTop="15dp"
                     app:srcCompat="@drawable/angry" />
                 <ImageButton
@@ -146,7 +149,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00ffffff"
-                    android:paddingLeft="140dp"
+                    android:paddingLeft="100dp"
                     android:paddingTop="15dp"
                     app:srcCompat="@drawable/sunshine" />
 

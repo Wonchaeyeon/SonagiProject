@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">CalendarView Test</string>
+    <string name="app_name" translatable="false">소나기</string>
     <string name="title_activity_simple_calendar_view" translatable="false">Simple CalendarView</string>
     <string name="title_activity_mini_calendar_view_popup" translatable="false">CalendarView Popup</string>
     <string name="today">today</string>

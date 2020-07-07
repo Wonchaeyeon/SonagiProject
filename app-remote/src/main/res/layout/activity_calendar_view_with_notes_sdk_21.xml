@@ -44,15 +44,15 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:fontFamily="@font/gmarket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="#30294d"
+        android:fontFamily="@font/gmarket"
         android:tint="#fff"
-        android:backgroundTint="#aa5f5e"
         app:elevation="0dp"
-        app:srcCompat="@android:drawable/ic_input_add"
+        app:srcCompat="@drawable/moon"
 
         />
 

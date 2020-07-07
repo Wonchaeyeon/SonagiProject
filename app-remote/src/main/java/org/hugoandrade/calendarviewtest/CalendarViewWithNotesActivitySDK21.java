@@ -245,5 +245,4 @@ public class CalendarViewWithNotesActivitySDK21 extends AppCompatActivity {
                 event.getColor(),
                 event.isCompleted() ? Color.TRANSPARENT : Color.RED);
     }
-
 }

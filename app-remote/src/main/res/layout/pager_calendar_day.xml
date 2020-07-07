@@ -92,18 +92,22 @@
                 android:layout_height="match_parent"/>
 
             <android.support.design.widget.FloatingActionButton
-                android:fontFamily="@font/gmarket"
                 android:id="@+id/fab_create_event"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:layout_gravity="bottom|end"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#30294d"
+                android:fontFamily="@font/gmarket"
                 android:tint="#fff"
                 app:backgroundTint="?attr/colorAccent"
                 app:elevation="0dp"
-                app:srcCompat="@android:drawable/ic_input_add"/>
+                app:srcCompat="@drawable/moon" />
 
         </RelativeLayout>
 

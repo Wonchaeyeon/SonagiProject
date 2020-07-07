@@ -227,10 +227,10 @@
 
                 <Button
                     android:id="@+id/go"
-                    android:layout_width="314dp"
-                    android:layout_height="84dp"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:layout_margin="310dp"
+                    android:layout_margin="270dp"
                     android:background="@drawable/ha"
                     android:fontFamily="@font/gmarket"
                     android:onClick="writeOnclick" />
